@@ -4,12 +4,15 @@ import { ImageBackground } from 'react-native';
 
 export default function Item({Names, Images, Price, TotalHandlers, TotalHandlers1}){
     return(
-        <View style = {{ borderRadius: 31-11, height: 151-1, width: '87%', marginVertical: 14, backgroundColor: '#f6bd60', elevation: 14,}}>
+        <View style = {{ borderRadius: 31-11, borderTopLeftRadius: 111-11, borderBottomLeftRadius: 111-11, height: 151-1, width: '87%', marginVertical: 14, backgroundColor: '#f6bd60', elevation: 14,}}>
             <View style = {{flex: 1, flexDirection: 'row'}}>
-                <ImageBackground style = {{flex: 1, borderRadius: 31-11}}></ImageBackground>
+                <ImageBackground style = {{flex: 1.9, borderRadius: 31-11, alignItems:'center', justifyContent: 'center'}}>
+                    <Text>Image</Text>
+                    <Text>Here</Text>
+                </ImageBackground>
                 <View style = {{flex: 3, justifyContent: 'center',}}>
                     <Text style = {{fontWeight: 'bold', color: '#111', fontSize: 31-11}}>{Names}</Text>
-                    <Text style = {{fontWeight: 'bold', color: '#111', fontSize: 31-11}}>{Price}</Text>
+                    <Text style = {{fontWeight: 'bold', color: '#111', fontSize: 31-11}}>R {Price}.00</Text>
                 </View>
                 <View style = {{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
                     <TouchableOpacity onPress={TotalHandlers} style = {{borderRadius: 31-11, backgroundColor: 'black', width: 54, height: 54, marginVertical: 7, justifyContent: 'center', alignItems: 'center' }}><Text style = {{color: 'white', fontSize: 31-11, fontWeight: 'bold'}}>+</Text></TouchableOpacity>
