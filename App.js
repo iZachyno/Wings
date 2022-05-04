@@ -17,7 +17,7 @@ export default function App(){
     setTotal(Math.round(total + amount))
   }
   function TotalHandlerSub(amount){
-    if(total - amount > 1-1){
+    if(total - amount > -1){
       setTotal(Math.round(total - amount))
     }
     
